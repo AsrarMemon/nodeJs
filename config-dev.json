@@ -1,0 +1,45 @@
+{
+	"logger": 
+	{
+		"path": "./logs/"
+	},
+
+	"server": 
+	{
+		"CORS": 
+		{
+			"allowedHosts": 
+			[
+				"http://localhost:3000"
+			]
+		},
+
+		"bodyParser": 
+		{
+			"limit": "500kb"
+		},
+
+		"session": 
+		{
+			"secret": "asrar"
+		}
+	},
+	"mongodb":{
+		"host": "mongodb://localhost:27017/",
+		"database": 
+		{
+			"db": 
+			{
+				"name": "fistuser",
+				"collection": 
+				{
+					"session": "session",
+					"user": "user"
+				}
+			},
+
+			"session": "asrar_Session"
+		}
+	}
+
+}
